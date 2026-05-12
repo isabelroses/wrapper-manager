@@ -66,11 +66,13 @@ in
           };
           outputs = [
             "out"
-          ] ++ (lib.optional hasMan "man");
+          ]
+          ++ (lib.optional hasMan "man");
           meta = (config.basePackage.meta or { }) // {
             outputsToInstall = [
               "out"
-            ] ++ (lib.optional hasMan "man");
+            ]
+            ++ (lib.optional hasMan "man");
           };
           postBuild = ''
             pushd "$out/bin" > /dev/null

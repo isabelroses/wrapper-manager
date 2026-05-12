@@ -1,4 +1,9 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 let
   inherit (lib) mkOption types;
 
@@ -24,7 +29,7 @@ in
     programs = mkOption {
       default = { };
       description = "Wrap specific binaries with specific options. You may use it to skip wrapping some program.";
-      example = lib.literalExpression '' 
+      example = lib.literalExpression ''
         {
           supervim = {
             target = "neovim";

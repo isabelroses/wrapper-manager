@@ -10,10 +10,12 @@ let
       class = "wrapperManager";
       modules = [
         ./modules/many-wrappers.nix
-      ] ++ modules;
+      ]
+      ++ modules;
       specialArgs = {
         inherit pkgs;
-      } // specialArgs;
+      }
+      // specialArgs;
     };
 in
 {
