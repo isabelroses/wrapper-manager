@@ -7,6 +7,7 @@ let
       specialArgs ? { },
     }:
     lib.evalModules {
+      class = "wrapperManager";
       modules = [
         ./modules/many-wrappers.nix
       ] ++ modules;
